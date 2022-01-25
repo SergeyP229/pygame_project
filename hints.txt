@@ -1,0 +1,4 @@
+Use WASD to move
+Click left mouse button to shoot
+Click right mouse button to use super bullet
+Click Esc to exit
