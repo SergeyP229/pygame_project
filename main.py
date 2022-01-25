@@ -904,5 +904,5 @@ if __name__ == '__main__':
         else:
             drawing()
         pygame.display.flip()
-        clock.tick(30)
+        clock.tick(60)
     pygame.quit()
