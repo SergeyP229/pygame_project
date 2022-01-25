@@ -723,7 +723,7 @@ def load_level(LEVEL):
 
 
 def draw_win_window(level):
-    global LEVEL, GAME_MODE, win_choice_coords, player, play_win_sound
+    global LEVEL, GAME_MODE, win_choice_coords, player, play_win_sound, play_gameover
     if play_win_sound:
         win_sound.play()
         play_win_sound = False
@@ -765,6 +765,7 @@ def draw_win_window(level):
                 load_level(LEVEL)
                 GAME_MODE = 'draw_level'
                 play_win_sound = True
+                play_gameover = True
         win_choice_coords = None
 
 
@@ -902,6 +903,6 @@ if __name__ == '__main__':
             pygame.mouse.set_visible(True)
         else:
             drawing()
-        pygame.display.flip()        
+        pygame.display.flip()
+        clock.tick(30)
     pygame.quit()
-    clock.tick(30)
